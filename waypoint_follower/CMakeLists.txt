@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   move_base_msgs
   roscpp
   std_msgs
+  robot_localization
   waypoint_follower_msgs
 )
 
@@ -108,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES waypoint_follower
-#  CATKIN_DEPENDS actionlib geometry_msgs move_base_msgs roscpp std_msgs waypoint_follower_msgs
+ CATKIN_DEPENDS actionlib geometry_msgs move_base_msgs roscpp std_msgs robot_localization waypoint_follower_msgs
 #  DEPENDS system_lib
 )
 
