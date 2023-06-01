@@ -109,7 +109,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES waypoint_follower_msgs
-  CATKIN_DEPENDS message_generation geometry_msgs std_msgs tf
+  CATKIN_DEPENDS message_generation message_runtime geometry_msgs std_msgs tf
 #  DEPENDS system_lib
 )
 
