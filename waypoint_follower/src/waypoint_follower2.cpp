@@ -90,6 +90,7 @@ bool convertUTMtoMap( geometry_msgs::PointStamped &p ){
     listener.transformPoint(frame_out, old_p, new_p);
     new_p.point.z = 0;
     p = new_p;
+    return true;
   } catch (tf2::TransformException e){
     cout << "Failed to convert UTM to map coordinates";
     return false;
@@ -100,7 +101,7 @@ bool convertUTMtoMap( geometry_msgs::PointStamped &p ){
 // Returns whether it was successful.
 bool convertPoseFrame( geometry_msgs::Pose &p, string frame_in, string frame_out ){
   try {
-    
+
     cout << "Time is: " << ros::Time::now() << endl;
     cout << "Looking up transform from " << frame_in << " to " << frame_out << endl;
     geometry_msgs::PoseStamped old_pose, new_pose;
